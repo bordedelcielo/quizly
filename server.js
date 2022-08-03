@@ -15,9 +15,7 @@ app.use('/graphql', graphqlHTTP({
     graphiql: true // graphiql?
 }))
 
-app.get("/", (req, res) => {
-		res.send('Hello World')
-})
+require('./src/routes')(app)
 
 app.listen(process.env.PORT, () => {
     console.log(`Server now running on PORT ${process.env.PORT}`)
