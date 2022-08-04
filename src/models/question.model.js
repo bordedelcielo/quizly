@@ -1,18 +1,18 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose")
 
 const questionSchema = new mongoose.Schema(
     {
         title: {
             type: String,
-            required: true,
+            required: true
         },
         correctAnswer: {
             type: String,
-            required: true,
+            required: true
         },
         order: {
             type: Number,
-            required: true,
+            required: true
         },
         quizId: {
             type: String,
@@ -22,4 +22,4 @@ const questionSchema = new mongoose.Schema(
     { timestamps: true }
 )
 
-module.exports = mongoose.model('question', questionSchema)
+module.exports = mongoose.model("question", questionSchema)

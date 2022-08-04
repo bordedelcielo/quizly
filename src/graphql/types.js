@@ -1,13 +1,4 @@
-const { 
-    GraphQLObjectType, 
-    GraphQLInputObjectType, 
-    GraphQLID,
-    GraphQLString,
-    GraphQLList,
-    GraphQLInt,
-    GraphQLBoolean,
-    GraphQLFloat,
-} = require('graphql')
+const { GraphQLObjectType, GraphQLInputObjectType, GraphQLID, GraphQLString, GraphQLList, GraphQLInt, GraphQLBoolean, GraphQLFloat } = require('graphql')
 
 const { User, Quiz, Question, Submission } = require('../models')
 
@@ -42,7 +33,7 @@ const QuestionType = new GraphQLObjectType({
         correctAnswer: { type: GraphQLString },
         quizId: { type: GraphQLString },
         order: { type: GraphQLInt },
-        quiz: {
+        quiz: { 
             type: QuizType,
             resolve(parent, args) {
                 return User.findById(parent.quizId)

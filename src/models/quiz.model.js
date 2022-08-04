@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose")
 
 const quizSchema = new mongoose.Schema(
     {
@@ -23,4 +23,4 @@ const quizSchema = new mongoose.Schema(
     { timestamps: true }
 )
 
-module.exports = mongoose.model('quiz', quizSchema)
+module.exports = mongoose.model("quiz", quizSchema)

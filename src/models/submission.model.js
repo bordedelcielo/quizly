@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose")
 
 const submissionSchema = new mongoose.Schema(
     {
@@ -18,4 +18,4 @@ const submissionSchema = new mongoose.Schema(
     { timestamps: true }
 )
 
-module.exports = mongoose.model('submission', submissionSchema)
+module.exports = mongoose.model("submission", submissionSchema)
